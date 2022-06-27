@@ -3,22 +3,25 @@ package employeecomoutation;
 public class employeewage {
 public static void main(String[] args) {
 	
-	int Employee_present=1;
+	int PartTime=1;
+	int FullTime=2;
+	double employeeCheck=(int) (Math.random() * 10)%3;
 	int wagePerHrs=20;
-	int workingHrs=8;
-	double employeeCheck=(int) (Math.random() * 10)%2;
+	int workingHrs=0;
 	
-	if(employeeCheck==Employee_present) {
-		System.out.println("Employee is 'PRESENT' ");
-		int employeeWage=wagePerHrs*workingHrs;
-		System.out.println("employee wage per working hours " + employeeWage);
+		
+	if(employeeCheck==FullTime) {
+		System.out.println("Employee is present as 'FULLTIME' ");
+		workingHrs=8;
+	}
+	else if(employeeCheck==PartTime){
+		System.out.println("Employee is present as 'PARTTIME' ");
+		workingHrs=4;
 	}
 	else {
 		System.out.println("Employee is absent");
-		System.out.println("employee wage per working hours " + 0 + " beacuse employee is absent");
-
 	}
-
+	int employeeWage = workingHrs*wagePerHrs;
+	System.out.println("Employee Daily wages is as per working hour " + employeeWage);
 }
-
 }

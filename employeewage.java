@@ -3,12 +3,12 @@ package employeecomoutation;
 public class employeewage 
 {
 	public static void CalculateWage(String CompanyName, int wagePerHrs, int maxWorkingDays , int maxWorkingHrs )
-{	
-	final int PartTime=1;
-    final int FullTime=2;
-		int totalwage =0;
-		int workingHrs=0;
-		
+	{
+		final int PartTime=1;
+	    final int FullTime=2;
+			int totalwage =0;
+			int workingHrs=0;
+	
 		for(int day=1, totalWorkingHours =0; day <= maxWorkingDays && totalWorkingHours < maxWorkingHrs; day++ )
 		{
 			int employeeCheck=(int) (Math.random() * 10)%3;
@@ -16,15 +16,15 @@ public class employeewage
 		switch(employeeCheck) 
 		{
 		case FullTime:
-			System.out.println("Employee is present as 'FULLTIME' ");
+			System.out.println("Employee is Present as 'FULLTIME' ");
 			workingHrs=8;
 			break;
 		case PartTime:
-			System.out.println("Employee is present as 'PARTTIME' ");
+			System.out.println("Employee is Present as 'PARTTIME' ");
 			workingHrs=4;
 			break;
 		default:
-			System.out.println("Employee is absent");
+			System.out.println("Employee is Absent ");
 		}
 		int employeeWage = workingHrs*wagePerHrs;
 		totalwage = totalwage+employeeWage;
@@ -33,13 +33,12 @@ public class employeewage
 		}
 		System.out.println("Company name " + CompanyName +"Total Wage for a month "+ totalwage);
 }
-public static void main(String[] args) {
+public static void main(String[] args)
+{
 	CalculateWage("BridgeLabz" ,20 , 20 ,100);
 	CalculateWage("Flipkart" , 25 ,18, 90);
 	CalculateWage("Accenture" ,28 ,18 ,80);
-	CalculateWage("GOOGLE" ,30 ,20 ,75);
-	
-	
+	CalculateWage("GOOGLE" ,30 ,20 ,75);	
 }
 
 }

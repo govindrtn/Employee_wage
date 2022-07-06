@@ -2,14 +2,10 @@ package employeecomoutation;
 
 public class employeewage 
 {
-public static void CalculateWage()
-{
-	
+	public static void CalculateWage(String CompanyName, int wagePerHrs, int maxWorkingDays , int maxWorkingHrs )
+{	
 	final int PartTime=1;
     final int FullTime=2;
-	final int wagePerHrs=20;
-	final int maxWorkingDays=20;
-	final int maxWorkingHrs=100;
 		int totalwage =0;
 		int workingHrs=0;
 		
@@ -35,10 +31,14 @@ public static void CalculateWage()
 		totalWorkingHours = totalWorkingHours + workingHrs;
 		System.out.println("Employee Daily wages is as per working hour " + employeeWage + " total working hours "+ totalWorkingHours);
 		}
-		System.out.println("Wage for a month "+ totalwage);
+		System.out.println("Company name " + CompanyName +"Total Wage for a month "+ totalwage);
 }
 public static void main(String[] args) {
-	CalculateWage();
+	CalculateWage("BridgeLabz" ,20 , 20 ,100);
+	CalculateWage("Flipkart" , 25 ,18, 90);
+	CalculateWage("Accenture" ,28 ,18 ,80);
+	CalculateWage("GOOGLE" ,30 ,20 ,75);
+	
 	
 }
 

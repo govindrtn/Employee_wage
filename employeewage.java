@@ -2,10 +2,24 @@ package employeecomoutation;
 
 public class employeewage 
 {
-	public static void CalculateWage(String CompanyName, int wagePerHrs, int maxWorkingDays , int maxWorkingHrs )
-	{
-		final int PartTime=1;
-	    final int FullTime=2;
+	public static final int PartTime=1;
+	public static final int FullTime=2;
+	
+	public int wagePerHrs;
+	public int maxWorkingDays;
+	public int maxWorkingHrs;
+	public String Company;
+	
+	
+	public employeewage(String CompanyName, int wagePerHours , int maxWorkingDays, int maxWorkingHours) {
+		this.Company = CompanyName;
+		this.wagePerHrs = wagePerHours;
+		this.maxWorkingDays = maxWorkingDays;
+		this.maxWorkingHrs = maxWorkingHours;
+	}
+
+	public void CalculateWage(){
+		
 			int totalwage =0;
 			int workingHrs=0;
 	
@@ -31,14 +45,12 @@ public class employeewage
 		totalWorkingHours = totalWorkingHours + workingHrs;
 		System.out.println("Employee Daily wages is as per working hour " + employeeWage + " total working hours "+ totalWorkingHours);
 		}
-		System.out.println("Company name " + CompanyName +"Total Wage for a month "+ totalwage);
+		System.out.println("Company name " + Company +" Total Wage for a month "+ totalwage);
 }
-public static void main(String[] args)
-{
-	CalculateWage("BridgeLabz" ,20 , 20 ,100);
-	CalculateWage("Flipkart" , 25 ,18, 90);
-	CalculateWage("Accenture" ,28 ,18 ,80);
-	CalculateWage("GOOGLE" ,30 ,20 ,75);	
-}
+public static void main(String[] args){
+	
+	employeewage apple = new employeewage("Apple" , 20 ,20 ,100);
+	apple.CalculateWage();
+ }
 
 }

@@ -51,6 +51,9 @@ public static void main(String[] args){
 	
 	employeewage apple = new employeewage("Apple" , 20 ,20 ,100);
 	apple.CalculateWage();
+	employeewage google = new employeewage("Google" , 50 ,15 ,50);
+	google.CalculateWage();
+
  }
 
 }

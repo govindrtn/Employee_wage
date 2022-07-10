@@ -11,14 +11,8 @@ public class employeewage
 	public String Company;
 	
 	
-	public employeewage(String CompanyName, int wagePerHours , int maxWorkingDays, int maxWorkingHours) {
-		this.Company = CompanyName;
-		this.wagePerHrs = wagePerHours;
-		this.maxWorkingDays = maxWorkingDays;
-		this.maxWorkingHrs = maxWorkingHours;
-	}
-
-	public void CalculateWage(){
+	
+	public void CalculateWage(String Company, int wagePerHrs , int maxWorkingDays, int maxWorkingHrs){
 		
 			int totalwage =0;
 			int workingHrs=0;
@@ -49,10 +43,10 @@ public class employeewage
 }
 public static void main(String[] args){
 	
-	employeewage apple = new employeewage("Apple" , 20 ,20 ,100);
-	apple.CalculateWage();
-	employeewage google = new employeewage("Google" , 50 ,15 ,50);
-	google.CalculateWage();
+	employeewage apple = new employeewage();
+	apple.CalculateWage("Amazon" , 50 ,15 ,50);
+	employeewage google = new employeewage();
+	google.CalculateWage("Google" , 50 ,15 ,50);
 
  }
 
